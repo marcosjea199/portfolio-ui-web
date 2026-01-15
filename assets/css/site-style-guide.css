@@ -1,0 +1,274 @@
+/* =====================================================
+   DESIGN TOKENS — OFFICIAL SYSTEM
+   ===================================================== */
+
+:root {
+  /* Brand */
+  --color-brand: #002FA6;
+  --color-brand-hover: #002FFF;
+  --color-accent: #FFA600;
+
+  /* Backgrounds */
+  --bg-page: #ffffff;
+  --bg-section: #D7DFE4;
+  --bg-card: #ffffff;
+  --bg-dark: #000514;
+
+  /* Text */
+  --text-primary: #000514;
+  --text-secondary: #2f3a44;
+  --text-muted: #91A5B4;
+  --text-inverse: #ffffff;
+
+  /* Borders */
+  --border-color: #D7DFE4;
+}
+
+/* -----------------------------------------------------
+   BACKWARD COMPATIBILITY (style-guide.html)
+   ----------------------------------------------------- */
+
+:root {
+  --brand-primary: var(--color-brand);
+  --brand-dark: var(--color-brand-hover);
+
+  --primary-color: var(--color-brand);
+  --primary-color-dark: var(--color-brand-hover);
+  --accent-color: var(--color-accent);
+
+  --background-color: var(--bg-page);
+  --card-background-color: var(--bg-card);
+
+  --text-color: var(--text-secondary);
+  --heading-color: var(--text-primary);
+  --muted-text-color: var(--text-muted);
+
+  --link-color: var(--color-brand);
+  --link-hover-color: var(--color-brand-hover);
+  --link-visited-color: var(--color-brand);
+}
+
+
+/* =====================================================
+   RESET & BASE
+   ===================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* =====================================================
+   DESIGN TOKENS — SYSTEM
+   ===================================================== */
+
+:root {
+  /* Brand */
+  --color-brand: #002FA6;
+  --color-brand-hover: #002FFF;
+  --color-accent: #FFA600;
+
+  /* Backgrounds */
+  --bg-page: #ffffff;
+  --bg-section: #D7DFE4;
+  --bg-card: #ffffff;
+  --bg-dark: #000514;
+
+  /* Text */
+  --text-primary: #000514;
+  --text-secondary: #2f3a44;
+  --text-muted: #91A5B4;
+  --text-inverse: #ffffff;
+
+  /* Borders */
+  --border-color: #D7DFE4;
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  /* Typography */
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+}
+
+/* =====================================================
+   DARK MODE
+   ===================================================== */
+
+[data-theme="dark"] {
+  --bg-page: #000514;
+  --bg-section: #060b1f;
+  --bg-card: #0b1230;
+
+  --text-primary: #ffffff;
+  --text-secondary: #D7DFE4;
+  --text-muted: #91A5B4;
+
+  --border-color: #1a2248;
+}
+
+/* =====================================================
+   TYPOGRAPHY
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.15;
+  max-width: 18ch;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: var(--fw-bold);
+  max-width: 28ch;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: var(--fw-medium);
+}
+
+p {
+  max-width: 65ch;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+/* =====================================================
+   LAYOUT
+   ===================================================== */
+
+.section-padding {
+  padding: var(--space-xl) 0;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: var(--space-lg) 0;
+  }
+}
+
+.bg-section {
+  background-color: var(--bg-section);
+}
+
+/* =====================================================
+   LINKS & BUTTONS
+   ===================================================== */
+
+a {
+  color: var(--color-brand);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-brand-hover);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-weight: var(--fw-medium);
+  transition: transform 0.15s ease, background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-brand);
+  color: var(--text-inverse);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-brand-hover);
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--color-brand);
+  color: var(--color-brand);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--bg-dark);
+}
+
+/* =====================================================
+   CARDS & INTERACTIONS
+   ===================================================== */
+
+.card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* =====================================================
+   NAVBAR
+   ===================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--bg-page);
+  border-bottom: 1px solid var(--border-color);
+}
