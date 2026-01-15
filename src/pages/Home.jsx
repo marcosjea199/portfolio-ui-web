@@ -1,6 +1,15 @@
+import SEO from '../components/SEO'
+
 function Home() {
   return (
     <>
+    <SEO
+  title="Diseñador UI Web y Frontend | Marcos Espinoza"
+  description="Portafolio profesional de Marcos Espinoza, diseñador UI Web y desarrollador frontend especializado en interfaces claras, escalables y orientadas a resultados."
+  url="/"
+  image="https://www.mespdesignweb.com/assets/images/og-home.jpg"
+/>
+
       {/* HERO */}
       <section className="section-padding">
         <div className="container">
