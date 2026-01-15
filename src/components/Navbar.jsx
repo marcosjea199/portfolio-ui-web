@@ -1,13 +1,16 @@
+import { Link } from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg site-header py-3">
       <div className="container">
-        <a className="navbar-brand fw-bold" href="#">
+        {/* Brand */}
+        <Link className="navbar-brand fw-bold" to="/">
           Marcos Espinoza
-        </a>
+        </Link>
 
+        {/* Mobile toggle */}
         <button
           className="navbar-toggler"
           type="button"
@@ -20,30 +23,35 @@ function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
+        {/* Nav links */}
         <div className="collapse navbar-collapse" id="mainNav">
           <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/servicios">
                 Servicios
-              </a>
+              </Link>
             </li>
+
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/portfolio">
                 Portfolio
-              </a>
+              </Link>
             </li>
+
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/sobre-mi">
                 Sobre mí
-              </a>
+              </Link>
             </li>
+
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <Link className="nav-link" to="/contacto">
                 Contacto
-              </a>
+              </Link>
             </li>
           </ul>
 
+          {/* Theme toggle */}
           <div className="ms-lg-3 mt-3 mt-lg-0">
             <ThemeToggle />
           </div>
